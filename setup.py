@@ -17,8 +17,8 @@ README = (HERE/"README.md").read_text()
 
 setup(
     name='Flask-Bundler',
-    version='1.0',
-    url='http://github.com/emdemir/flask-sqlite3/',
+    version='1.0.1',
+    url='http://github.com/emdemir/Flask-Bundler/',
     license='BSD',
     author='Efe Mert Demir',
     author_email='efemertdemir@hotmail.com',
