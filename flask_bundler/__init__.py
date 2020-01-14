@@ -114,8 +114,11 @@ class Bundler:
 
     def update_bundle(self) -> None:
         """Update the bundle data."""
-        with open(self.stats_file, "r") as bundle_file:
-            self.bundles = self._parse_bundles(bundle_file)
+        try:
+            with open(self.stats_file, "r") as bundle_file:
+                self.bundles = self._parse_bundles(bundle_file)
+        except FileNotFoundError:
+            raise RuntimeError("The webpack manifest doesn't exist.")
 
     def try_update_bundle(self) -> None:
         """Request middleware to check whether to update the bundle data."""
