@@ -14,6 +14,8 @@ You need to configure Webpack to output `webpack-stats.json`. For this, add
 `webpack.config.js` add:
 
 ``` javascript
+const BundleTracker = require("webpack-bundle-tracker");
+// ...
 module.exports = {
     // ...
     plugins: [
@@ -28,7 +30,7 @@ module.exports = {
 ```
 
 You can place the `webpack-stats.json` file anywhere in the application. By
-default Webpack-Bundler will check for `webpack-stats.json` inside the
+default Flask-Bundler will check for `webpack-stats.json` inside the
 application's static folder.
 
 Afterwards, just initialize Flask-Bundler like you would with any extension.
