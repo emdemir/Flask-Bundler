@@ -8,7 +8,11 @@ allowing cache busting and easy deployment.
 It uses Webpack's BundleTracker plugin to get information about the bundles
 in your configuration and to serve them.
 """
+import pathlib
 from setuptools import setup
+
+HERE = pathlib.Path(__file__).parent
+README = (HERE/"README.md").read_text()
 
 
 setup(
@@ -19,7 +23,8 @@ setup(
     author='Efe Mert Demir',
     author_email='efemertdemir@hotmail.com',
     description='Flask extension to serve Webpack bundles',
-    long_description=__doc__,
+    long_description=README,
+    long_description_content_type="text/markdown",
     packages=['flask_bundler'],
     zip_safe=False,
     include_package_data=True,
