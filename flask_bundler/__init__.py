@@ -60,7 +60,9 @@ class Bundler:
         self.renderers = {
             "css": "<link rel=\"stylesheet\" type=\"text/css\" "
                    "href=\"{0}\" />",
-            "js": "<script type=\"text/javascript\" src=\"{0}\"></script>"
+            "js": "<script type=\"text/javascript\" src=\"{0}\"></script>",
+            # Ignore source map files, which are produced by bundlers.
+            "map": ""
         }
 
         if custom_renderers is not None:

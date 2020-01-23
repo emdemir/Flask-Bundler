@@ -17,7 +17,7 @@ README = (HERE/"README.md").read_text()
 
 setup(
     name='Flask-Bundler',
-    version='1.0.1',
+    version='1.0.2',
     url='http://github.com/emdemir/Flask-Bundler/',
     license='BSD',
     author='Efe Mert Demir',
